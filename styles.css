@@ -120,10 +120,13 @@ body.light-mode .navbar__buy-btn {
 }
 
 body.light-mode .text-gradient {
-  background: var(--grad-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: none !important;
+  -webkit-text-fill-color: #1a1a1e !important;
+}
+
+body.light-mode .hero .hero__title .text-gradient {
+  background: none !important;
+  -webkit-text-fill-color: #1a1a1e !important;
 }
 
 html {
@@ -466,6 +469,50 @@ body.light-mode .theme-toggle:hover {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--clr-accent);
+}
+
+/* ── Hero accent text colour — swap the active block to change ── */
+
+/* Option A: Warm Amber
+.hero .hero__title .text-gradient {
+  background: linear-gradient(135deg, #e8b050 0%, #f4d890 50%, #e8b050 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+*/
+
+/* Option B: Electric Teal
+.hero .hero__title .text-gradient {
+  background: linear-gradient(135deg, #4dd8c0 0%, #80eed8 50%, #4dd8c0 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+*/
+
+/* Option D: Dusty Lavender
+.hero .hero__title .text-gradient {
+  background: linear-gradient(135deg, #b8a0e0 0%, #d4c0f8 50%, #b8a0e0 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+*/
+
+/* Option E: Coral Sunset
+.hero .hero__title .text-gradient {
+  background: linear-gradient(135deg, #f47858 0%, #f4a880 50%, #f47858 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+*/
+
+/* Option H: Pure White ← ACTIVE */
+.hero .hero__title .text-gradient {
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .hero__title {
