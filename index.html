@@ -12,6 +12,17 @@
 </head>
 <body>
 
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Film Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Gradient Blobs -->
+  <div class="blob blob--1"></div>
+  <div class="blob blob--2"></div>
+  <div class="blob blob--3"></div>
+
   <!-- ═══════════════════════════════════════════════ -->
   <!-- NAVIGATION                                      -->
   <!-- ═══════════════════════════════════════════════ -->
@@ -48,8 +59,16 @@
       </div>
       <!-- Right: Text -->
       <div class="hero__text">
-        <p class="hero__eyebrow">The Ulatbansi Method</p>
-        <h1 class="hero__title">Break Free From<br />Cycles of <span class="text-gradient">Lost Motivation</span></h1>
+        <p class="hero__eyebrow hero-reveal" style="--reveal-i:0">The Ulatbansi Method</p>
+        <h1 class="hero__title">
+          <span class="hero-word hero-reveal" style="--reveal-i:1">Break</span>
+          <span class="hero-word hero-reveal" style="--reveal-i:2">Free</span>
+          <span class="hero-word hero-reveal" style="--reveal-i:3">From</span><br />
+          <span class="hero-word hero-reveal" style="--reveal-i:4">Cycles</span>
+          <span class="hero-word hero-reveal" style="--reveal-i:5">of</span>
+          <span class="hero-word hero-reveal text-gradient" style="--reveal-i:6">Lost</span>
+          <span class="hero-word hero-reveal text-gradient" style="--reveal-i:7">Motivation</span>
+        </h1>
         <p class="hero__subtitle">The Ulatbansi Method helps you design a lasting transformation brick by brick&mdash;without relying on willpower.</p>
         <div class="hero__cta-group">
           <a href="#product" class="btn btn--primary">Get the Journal</a>

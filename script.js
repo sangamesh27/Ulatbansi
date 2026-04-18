@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealTargets = document.querySelectorAll(
     '.architect__container, .about__container, .product__container, ' +
     '.testimonials__heading, .testimonials__grid, ' +
-    '.journey__container, .hero__text, .hero__images'
+    '.journey__container, .hero__images'
   );
 
   revealTargets.forEach(el => el.classList.add('reveal'));
@@ -27,20 +27,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealTargets.forEach(el => observer.observe(el));
 
-  /* ─── Navbar scroll effect ─────────────────────────── */
+  /* ─── Navbar scroll effect + Progress Bar ──────────── */
   const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
+  const scrollProgress = document.getElementById('scroll-progress');
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
 
+    // Navbar background
     if (currentScroll > 80) {
       navbar.style.background = 'rgba(12, 12, 14, 0.88)';
     } else {
       navbar.style.background = 'rgba(12, 12, 14, 0.65)';
     }
 
-    lastScroll = currentScroll;
+    // Scroll progress bar
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (currentScroll / docHeight) * 100 : 0;
+    scrollProgress.style.width = progress + '%';
+
   }, { passive: true });
 
   /* ─── Smooth anchor scrolling ──────────────────────── */
